@@ -19,6 +19,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userdb", {
   useCreateIndex: true,
 });
 
+require("./routes/html-routes")(app);
+
 app.listen(PORT, () => {
   console.log(`App running on port http://localhost:${PORT}`);
 });
