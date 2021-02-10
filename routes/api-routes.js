@@ -22,7 +22,27 @@ module.exports = (app) => {
         res.json(err);
       });
   });
+
   //get request for workouts range (find)
+  app.get("/api/workouts/range", (req, res) => {
+    db.Workout.find({})
+      .then((dbWorkout) => {
+        res.json(dbWorkout);
+      })
+      .catch((err) => {
+        res.json(err);
+      });
+  });
+
+  app.post("/api/workouts/range", (req, res) => {
+    db.Workout.create({})
+      .then((dbWorkout) => {
+        res.json(dbWorkout);
+      })
+      .catch((err) => {
+        res.json(err);
+      });
+  });
 
   app.put("/api/workouts/:id", (req, res) => {
     db.Workout.findByIdAndUpdate(
