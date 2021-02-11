@@ -3,7 +3,16 @@ const db = require("../models");
 module.exports = (app) => {
   app.get("/api/workouts", (req, res) => {
     db.Workout.find({})
-
+    db.Workout.aggregate([
+      {
+        "$addFields": {
+          "totalDuration": {
+            "$sum": "$exercises.duration",
+          },
+        },
+      },
+    ])
+    .sort({ date: -1 })
       .then((dbWorkout) => {
         res.json(dbWorkout);
       })
@@ -26,6 +35,15 @@ module.exports = (app) => {
   //get request for workouts range (find)
   app.get("/api/workouts/range", (req, res) => {
     db.Workout.find({})
+    db.Workout.aggregate([
+      {
+        "$addFields": {
+          "totalDuration": {
+            "$sum": "$exercises.duration",
+          },
+        },
+      },
+    ])
       .then((dbWorkout) => {
         res.json(dbWorkout);
       })
@@ -48,7 +66,7 @@ module.exports = (app) => {
     db.Workout.findByIdAndUpdate(
       req.params.id,
       {
-        $push: { exercise: req.body },
+        $push: { exercises: req.body },
       },
       {
         new: true,
