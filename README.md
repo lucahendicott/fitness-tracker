@@ -10,7 +10,7 @@ Application using MongoDB as the database, mongoose ORM and express server for a
 * [Credits](#credits)   
 * [License](#license)  
 * [Questions](#questions)  
-* [Deployed App](#deployedapp)
+* [Deployed App](#deployed app)
 
 ## Installation  
 app runs as is in browser. No need for any installs or downloads  
@@ -24,9 +24,9 @@ api-routes.js is where the api end points are being hit to find, create and upda
 
 ## Credits  
   
-[addFields for mongoDB](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/) 
-[sum aggregation mongoDB](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/) 
-[aggregate mongoose](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) 
+[addFields for mongoDB](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/)<br> 
+[sum aggregation mongoDB](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/)<br>
+[aggregate mongoose](https://mongoosejs.com/docs/api.html#aggregate_Aggregate)<br>
 
 ## License  
 MIT  
