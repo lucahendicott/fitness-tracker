@@ -10,7 +10,7 @@ Application using MongoDB as the database, mongoose ORM and express server for a
 * [Credits](#credits)   
 * [License](#license)  
 * [Questions](#questions)  
-* [Deployed App](#deployed app)
+* [Deployed App](#deployed-app)
 
 ## Installation  
 app runs as is in browser. No need for any installs or downloads  
